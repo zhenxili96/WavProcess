@@ -29,7 +29,7 @@ int Stereo2Mono(const string &inputPath, const string &outputPath) {
 
     ofstream outFile(outputPath, ios::binary);
     outFile.write((char*)&header, sizeof(header));
-    uint16_t channel1, channel2;
+    uint16_t channel1, channel2;    // bitsPerSample is 16
     uint32_t dataSize = 0;
     while (!inFile.eof()) {
         // read contents of both channels
